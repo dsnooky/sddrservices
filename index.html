@@ -14,7 +14,7 @@
 <style>
 :root {
   --primary: #2563eb;
-  --secondary: #0f172a;
+  --dark: #0f172a;
   --light: #f8fafc;
   --gray: #64748b;
 }
@@ -28,8 +28,26 @@
 
 body {
   background: var(--light);
-  color: var(--secondary);
-  line-height: 1.6;
+  color: var(--dark);
+}
+
+/* HERO BACKGROUND */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  color: white;
+  background:
+    linear-gradient(rgba(15,23,42,0.75), rgba(15,23,42,0.75)),
+    url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.hero-content {
+  animation: fadeUp 1s ease forwards;
 }
 
 .container {
@@ -38,43 +56,43 @@ body {
   margin: auto;
 }
 
-/* HERO */
-.hero {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  background: linear-gradient(135deg, #2563eb, #1e40af);
-  color: white;
-}
-
-.hero-content {
-  animation: fadeUp 1s ease forwards;
-}
-
 .hero h1 {
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
   margin-bottom: 1rem;
 }
 
 .hero p {
   max-width: 600px;
   margin-bottom: 2rem;
+  font-size: 1.05rem;
+  color: #e5e7eb;
 }
 
+/* BUTTONS */
 .btn {
-  display: inline-block;
-  padding: 12px 28px;
-  background: white;
-  color: var(--primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 30px;
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: white;
   border-radius: 30px;
   font-weight: 600;
   text-decoration: none;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(37,99,235,0.4);
+}
+
+.btn i {
+  transition: transform 0.3s ease;
+}
+
+.btn:hover i {
+  transform: translateX(4px);
 }
 
 /* SECTIONS */
@@ -87,37 +105,8 @@ section {
   margin-bottom: 50px;
 }
 
-.section-title h2 {
-  font-size: 2rem;
-}
-
 .section-title p {
   color: var(--gray);
-}
-
-/* SERVICES */
-.services {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-}
-
-.card {
-  background: white;
-  padding: 30px;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-8px);
-}
-
-.card i {
-  font-size: 2rem;
-  color: var(--primary);
-  margin-bottom: 15px;
 }
 
 /* PROJECTS */
@@ -127,34 +116,51 @@ section {
   gap: 25px;
 }
 
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
 .project {
   border-left: 4px solid var(--primary);
 }
 
-/* WORKFLOW */
-.steps {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  text-align: center;
+.project h3 a {
+  color: inherit;
+  text-decoration: none;
 }
 
-.step {
-  background: white;
-  padding: 25px;
-  border-radius: 16px;
+.project h3 a:hover {
+  color: var(--primary);
+}
+
+.project-btn {
+  margin-top: 15px;
+  width: fit-content;
 }
 
 /* CTA */
 .cta {
-  background: linear-gradient(135deg, #1e40af, #2563eb);
+  background:
+    linear-gradient(rgba(30,64,175,0.85), rgba(37,99,235,0.85)),
+    url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center;
   color: white;
   text-align: center;
-  padding: 80px 20px;
+  padding: 90px 20px;
 }
 
-.cta h2 {
-  margin-bottom: 20px;
+.cta p {
+  margin-top: 10px;
+  color: #e5e7eb;
 }
 
 /* FOOTER */
@@ -183,24 +189,20 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
+  color: white;
   font-size: 26px;
   text-decoration: none;
   box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   animation: pulse 2s infinite;
 }
 
-.chat-btn:hover {
-  transform: scale(1.1);
-}
+.whatsapp { background: #25D366; }
+.messenger { background: linear-gradient(135deg, #0084ff, #00c6ff); }
 
-.whatsapp {
-  background: #25D366;
-}
-
-.messenger {
-  background: linear-gradient(135deg, #0084ff, #00c6ff);
+/* ANIMATIONS */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes pulse {
@@ -209,16 +211,10 @@ footer {
   100% { box-shadow: 0 0 0 0 rgba(0,0,0,0); }
 }
 
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
+/* MOBILE */
 @media (max-width: 600px) {
-  .chat-btn {
-    width: 50px;
-    height: 50px;
-    font-size: 24px;
+  .hero {
+    background-attachment: scroll;
   }
 }
 </style>
@@ -230,82 +226,35 @@ footer {
 <section class="hero">
   <div class="container hero-content">
     <h1>Hi, I’m Snooky Delos Reyes</h1>
-    <p>I help small businesses and online sellers get more customers through fast, clear, and conversion-focused websites.</p>
-    <a href="#contact" class="btn">Free Consultation</a>
+    <p>I help small businesses and online sellers turn visitors into customers with fast, modern, and conversion-focused websites.</p>
+    <a href="#contact" class="btn">Free Consultation <i class="fa-solid fa-arrow-right"></i></a>
   </div>
 </section>
 
-<!-- SERVICES -->
-<section>
-  <div class="container">
-    <div class="section-title">
-      <h2>What I Do</h2>
-      <p>Simple, practical solutions that work</p>
-    </div>
-
-    <div class="services">
-      <div class="card">
-        <i class="fa-solid fa-globe"></i>
-        <h3>Small Business Websites</h3>
-        <p>Professional, mobile-friendly websites designed to convert visitors into customers.</p>
-      </div>
-
-      <div class="card">
-        <i class="fa-solid fa-cart-shopping"></i>
-        <h3>Online Shop Websites</h3>
-        <p>Clean product listings with pricing and strong call-to-action buttons.</p>
-      </div>
-
-      <div class="card">
-        <i class="fa-solid fa-toolbox"></i>
-        <h3>Custom Web Tools</h3>
-        <p>Simple tools tailored to your business needs.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-    <!-- PROJECTS -->
+<!-- PROJECTS -->
 <section>
   <div class="container">
     <div class="section-title">
       <h2>Featured Projects</h2>
-      <p>Built with real business goals in mind</p>
+      <p>Real solutions for real businesses</p>
     </div>
 
     <div class="projects">
       <div class="card project">
-        <h3>TopPickrPro</h3>
-        <p><strong>Problem:</strong> Beginners struggle to find legitimate online income methods.</p>
-        <p><strong>Solution:</strong> Built an educational platform with curated content.</p>
-        <p><strong>Result:</strong> SEO-ready structure and monetization-friendly design.</p>
-        <a href="https://toppickrpro.com" target="_blank" class="btn" style="margin-top:10px;">View Project</a>
+        <h3><a href="https://toppickrpro.com" target="_blank">TopPickrPro</a></h3>
+        <p><strong>Result:</strong> SEO-ready, AdSense-friendly platform.</p>
+        <a href="https://toppickrpro.com" target="_blank" class="btn project-btn">
+          View Project <i class="fa-solid fa-arrow-right"></i>
+        </a>
       </div>
 
       <div class="card project">
-        <h3>Online Shop Website (Sample)</h3>
-        <p><strong>Problem:</strong> Sellers rely only on social media pages.</p>
-        <p><strong>Solution:</strong> Created a simple online shop with clear product listings.</p>
-        <p><strong>Result:</strong> Improved buyer trust and professional brand image.</p>
-        <a href="https://example.com" target="_blank" class="btn" style="margin-top:10px;">View Project</a>
+        <h3><a href="https://example.com" target="_blank">Online Shop Website</a></h3>
+        <p><strong>Result:</strong> Improved buyer trust and brand image.</p>
+        <a href="https://example.com" target="_blank" class="btn project-btn">
+          View Project <i class="fa-solid fa-arrow-right"></i>
+        </a>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- WORKFLOW -->
-<section>
-  <div class="container">
-    <div class="section-title">
-      <h2>How We Work</h2>
-    </div>
-
-    <div class="steps">
-      <div class="step">1️⃣ Discuss your goals</div>
-      <div class="step">2️⃣ Simple solution plan</div>
-      <div class="step">3️⃣ Design & build</div>
-      <div class="step">4️⃣ Review & launch</div>
     </div>
   </div>
 </section>
@@ -313,16 +262,14 @@ footer {
 <!-- CTA -->
 <section class="cta" id="contact">
   <h2>Let’s Build Something That Works</h2>
-  <p>Simple. Effective. Built for real users.</p>
-  <br>
-  <a href="#" class="btn">Message Me</a>
+  <p>Simple. Clean. Built to convert.</p>
 </section>
 
 <footer>
   © 2026 Snooky Delos Reyes • All Rights Reserved
 </footer>
 
-<!-- FLOATING CHAT BUTTONS -->
+<!-- FLOATING CHAT -->
 <div class="chat-float">
   <a href="https://wa.me/63XXXXXXXXXX" target="_blank" class="chat-btn whatsapp">
     <i class="fab fa-whatsapp"></i>
@@ -333,4 +280,4 @@ footer {
 </div>
 
 </body>
-  </html>
+</html>
