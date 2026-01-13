@@ -5,13 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Snooky Delos Reyes | Web Solutions for Small Businesses</title>
 
-<!-- Google Font (optimized) -->
+<!-- Optimized Google Font -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
 <!-- Icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
 <style>
 :root {
@@ -77,10 +77,6 @@ body {
   font-weight:600;
 }
 
-.btn:hover {
-  opacity:.9;
-}
-
 /* SECTIONS */
 section {
   padding:80px 0;
@@ -93,6 +89,51 @@ section {
 
 .section-title p {
   color:var(--gray);
+}
+
+/* WHAT I DO */
+.services {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+
+.service-box {
+  background:#fff;
+  padding:30px;
+  border-radius:16px;
+  text-align:center;
+  box-shadow:0 6px 20px rgba(0,0,0,.05);
+}
+
+.service-box i {
+  font-size:2rem;
+  color:var(--primary);
+  margin-bottom:15px;
+}
+
+/* WHY CHOOSE ME */
+.why {
+  background:#f1f5f9;
+}
+
+.why-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+
+.why-box {
+  background:#fff;
+  padding:30px;
+  border-radius:16px;
+  text-align:center;
+}
+
+.why-box i {
+  font-size:2rem;
+  color:var(--primary);
+  margin-bottom:15px;
 }
 
 /* PROJECTS */
@@ -122,30 +163,6 @@ section {
   margin-top:15px;
 }
 
-/* WHY CHOOSE ME */
-.why {
-  background:#f1f5f9;
-}
-
-.why-grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:25px;
-}
-
-.why-box {
-  background:#fff;
-  padding:30px;
-  border-radius:16px;
-  text-align:center;
-}
-
-.why-box i {
-  font-size:2rem;
-  color:var(--primary);
-  margin-bottom:15px;
-}
-
 /* TESTIMONIALS */
 .testimonials {
   color:#fff;
@@ -154,18 +171,18 @@ section {
     url("https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1600&q=70");
   background-size:cover;
   background-position:center;
+  text-align:center;
 }
 
 .testimonial-box {
   max-width:700px;
   margin:auto;
-  text-align:center;
 }
 
 .testimonial-box p {
   font-style:italic;
-  margin-bottom:15px;
   color:#e5e7eb;
+  margin-bottom:15px;
 }
 
 /* CTA */
@@ -192,7 +209,6 @@ footer {
   display:flex;
   flex-direction:column;
   gap:12px;
-  z-index:999;
 }
 
 .chat-btn {
@@ -222,30 +238,36 @@ footer {
 <section class="hero">
   <div class="container">
     <h1>Hi, I’m Snooky Delos Reyes</h1>
-    <p>I help small businesses and online sellers turn visitors into customers using fast, SEO-friendly, and conversion-focused websites.</p>
+    <p>I build fast, SEO-friendly, and conversion-focused websites that help small businesses grow online.</p>
     <a href="#contact" class="btn">Free Consultation</a>
   </div>
 </section>
 
-<!-- PROJECTS -->
+<!-- WHAT I DO -->
 <section>
   <div class="container">
     <div class="section-title">
-      <h2>Featured Projects</h2>
-      <p>Real solutions for real businesses</p>
+      <h2>What I Do</h2>
+      <p>Practical web solutions for real businesses</p>
     </div>
 
-    <div class="projects">
-      <div class="card project">
-        <h3><a href="https://toppickrpro.com" target="_blank">TopPickrPro</a></h3>
-        <p>SEO-ready and AdSense-friendly educational platform.</p>
-        <a href="https://toppickrpro.com" target="_blank" class="btn project-btn">View Project</a>
+    <div class="services">
+      <div class="service-box">
+        <i class="fa-solid fa-laptop-code"></i>
+        <h3>Website Development</h3>
+        <p>Modern, responsive websites optimized for speed and user experience.</p>
       </div>
 
-      <div class="card project">
-        <h3><a href="https://toppickrpro.com/shopping" target="_blank">Online Shop Website</a></h3>
-        <p>Simple shop layout that builds trust and drives clicks.</p>
-        <a href="https://toppickrpro.com/shopping" target="_blank" class="btn project-btn">View Project</a>
+      <div class="service-box">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <h3>Online Shops</h3>
+        <p>Clean product pages that build trust and make buying easy.</p>
+      </div>
+
+      <div class="service-box">
+        <i class="fa-solid fa-chart-line"></i>
+        <h3>SEO & Performance</h3>
+        <p>Built with Google PageSpeed, SEO, and Core Web Vitals in mind.</p>
       </div>
     </div>
   </div>
@@ -256,36 +278,59 @@ footer {
   <div class="container">
     <div class="section-title">
       <h2>Why Choose Me</h2>
-      <p>Focused on results, not just design</p>
+      <p>Focused on results, not just visuals</p>
     </div>
 
     <div class="why-grid">
       <div class="why-box">
         <i class="fa-solid fa-bolt"></i>
         <h3>Fast & Optimized</h3>
-        <p>Websites built for speed, SEO, and Google PageSpeed scores.</p>
+        <p>Your website loads fast and scores well on Google PageSpeed.</p>
       </div>
 
       <div class="why-box">
-        <i class="fa-solid fa-chart-line"></i>
-        <h3>Conversion-Focused</h3>
-        <p>Designed to turn visitors into leads and paying customers.</p>
+        <i class="fa-solid fa-user-check"></i>
+        <h3>User-Focused</h3>
+        <p>Designed around real users to increase trust and conversions.</p>
       </div>
 
       <div class="why-box">
         <i class="fa-solid fa-handshake"></i>
-        <h3>Business-Minded</h3>
-        <p>I understand sales, trust, and how users actually behave.</p>
+        <h3>Business-Oriented</h3>
+        <p>I understand sales, branding, and customer behavior.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
+<!-- PROJECTS -->
+<section>
+  <div class="container">
+    <div class="section-title">
+      <h2>Featured Projects</h2>
+    </div>
+
+    <div class="projects">
+      <div class="card project">
+        <h3><a href="https://toppickrpro.com" target="_blank">TopPickrPro</a></h3>
+        <p>SEO-ready, AdSense-friendly platform.</p>
+        <a href="https://toppickrpro.com" class="btn project-btn" target="_blank">View Project</a>
+      </div>
+
+      <div class="card project">
+        <h3><a href="https://toppickrpro.com/shopping" target="_blank">Online Shop Website</a></h3>
+        <p>Simple shop layout built for trust.</p>
+        <a href="https://toppickrpro.com/shopping" class="btn project-btn" target="_blank">View Project</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIAL -->
 <section class="testimonials">
   <div class="container">
     <div class="testimonial-box">
-      <p>“Snooky delivered a clean, professional website that made our business look more credible online.”</p>
+      <p>“Snooky created a clean, fast website that helped our business look professional online.”</p>
       <strong>— Small Business Owner</strong>
     </div>
   </div>
@@ -293,7 +338,7 @@ footer {
 
 <!-- CTA -->
 <section class="cta" id="contact">
-  <h2>Ready to Grow Your Business Online?</h2>
+  <h2>Ready to Grow Your Business?</h2>
   <p>Let’s build something that actually works.</p>
 </section>
 
@@ -303,10 +348,10 @@ footer {
 
 <!-- FLOATING CHAT -->
 <div class="chat-float">
-  <a href="https://wa.me/639083131655" class="chat-btn whatsapp" target="_blank">
+  <a href="https://wa.me/63XXXXXXXXXX" class="chat-btn whatsapp" target="_blank">
     <i class="fab fa-whatsapp"></i>
   </a>
-  <a href="https://www.facebook.com/share/1Zn9Uk1nWm/" class="chat-btn messenger" target="_blank">
+  <a href="https://m.me/YOURFACEBOOKUSERNAME" class="chat-btn messenger" target="_blank">
     <i class="fab fa-facebook-messenger"></i>
   </a>
 </div>
