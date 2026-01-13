@@ -5,217 +5,213 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Snooky Delos Reyes | Web Solutions for Small Businesses</title>
 
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<!-- Google Font (optimized) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
 <!-- Icons -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
 <style>
 :root {
-  --primary: #2563eb;
-  --dark: #0f172a;
-  --light: #f8fafc;
-  --gray: #64748b;
+  --primary:#2563eb;
+  --dark:#0f172a;
+  --light:#f8fafc;
+  --gray:#64748b;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
 }
 
 body {
-  background: var(--light);
-  color: var(--dark);
-}
-
-/* HERO BACKGROUND */
-.hero {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  position: relative;
-  color: white;
-  background:
-    linear-gradient(rgba(15,23,42,0.75), rgba(15,23,42,0.75)),
-    url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
-
-.hero-content {
-  animation: fadeUp 1s ease forwards;
+  background:var(--light);
+  color:var(--dark);
+  line-height:1.6;
 }
 
 .container {
-  width: 90%;
-  max-width: 1100px;
-  margin: auto;
+  width:90%;
+  max-width:1100px;
+  margin:auto;
+}
+
+/* HERO */
+.hero {
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  color:#fff;
+  background:
+    linear-gradient(rgba(15,23,42,.75),rgba(15,23,42,.75)),
+    url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=70");
+  background-size:cover;
+  background-position:center;
 }
 
 .hero h1 {
-  font-size: clamp(2.2rem, 5vw, 3.2rem);
-  margin-bottom: 1rem;
+  font-size:clamp(2.2rem,5vw,3.2rem);
+  margin-bottom:1rem;
 }
 
 .hero p {
-  max-width: 600px;
-  margin-bottom: 2rem;
-  font-size: 1.05rem;
-  color: #e5e7eb;
+  max-width:600px;
+  margin-bottom:2rem;
+  color:#e5e7eb;
 }
 
-/* BUTTONS */
+/* BUTTON */
 .btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 14px 30px;
-  background: linear-gradient(135deg, #2563eb, #1e40af);
-  color: white;
-  border-radius: 30px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:14px 30px;
+  background:linear-gradient(135deg,#2563eb,#1e40af);
+  color:#fff;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
 }
 
 .btn:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(37,99,235,0.4);
-}
-
-.btn i {
-  transition: transform 0.3s ease;
-}
-
-.btn:hover i {
-  transform: translateX(4px);
+  opacity:.9;
 }
 
 /* SECTIONS */
 section {
-  padding: 80px 0;
+  padding:80px 0;
 }
 
 .section-title {
-  text-align: center;
-  margin-bottom: 50px;
+  text-align:center;
+  margin-bottom:50px;
 }
 
 .section-title p {
-  color: var(--gray);
+  color:var(--gray);
 }
 
 /* PROJECTS */
 .projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
 }
 
 .card {
-  background: white;
-  padding: 30px;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-  transition: transform 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-10px);
+  background:#fff;
+  padding:30px;
+  border-radius:16px;
+  box-shadow:0 6px 20px rgba(0,0,0,.05);
 }
 
 .project {
-  border-left: 4px solid var(--primary);
+  border-left:4px solid var(--primary);
 }
 
 .project h3 a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.project h3 a:hover {
-  color: var(--primary);
+  color:inherit;
+  text-decoration:none;
 }
 
 .project-btn {
-  margin-top: 15px;
-  width: fit-content;
+  margin-top:15px;
+}
+
+/* WHY CHOOSE ME */
+.why {
+  background:#f1f5f9;
+}
+
+.why-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+
+.why-box {
+  background:#fff;
+  padding:30px;
+  border-radius:16px;
+  text-align:center;
+}
+
+.why-box i {
+  font-size:2rem;
+  color:var(--primary);
+  margin-bottom:15px;
+}
+
+/* TESTIMONIALS */
+.testimonials {
+  color:#fff;
+  background:
+    linear-gradient(rgba(15,23,42,.85),rgba(15,23,42,.85)),
+    url("https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1600&q=70");
+  background-size:cover;
+  background-position:center;
+}
+
+.testimonial-box {
+  max-width:700px;
+  margin:auto;
+  text-align:center;
+}
+
+.testimonial-box p {
+  font-style:italic;
+  margin-bottom:15px;
+  color:#e5e7eb;
 }
 
 /* CTA */
 .cta {
-  background:
-    linear-gradient(rgba(30,64,175,0.85), rgba(37,99,235,0.85)),
-    url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80");
-  background-size: cover;
-  background-position: center;
-  color: white;
-  text-align: center;
-  padding: 90px 20px;
-}
-
-.cta p {
-  margin-top: 10px;
-  color: #e5e7eb;
+  text-align:center;
+  background:linear-gradient(135deg,#1e40af,#2563eb);
+  color:#fff;
+  padding:90px 20px;
 }
 
 /* FOOTER */
 footer {
-  background: #020617;
-  color: #94a3b8;
-  text-align: center;
-  padding: 20px;
+  background:#020617;
+  color:#94a3b8;
+  text-align:center;
+  padding:20px;
 }
 
 /* FLOATING CHAT */
 .chat-float {
-  position: fixed;
-  bottom: 25px;
-  right: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  z-index: 999;
+  position:fixed;
+  bottom:25px;
+  right:20px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  z-index:999;
 }
 
 .chat-btn {
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 26px;
-  text-decoration: none;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-  animation: pulse 2s infinite;
+  width:52px;
+  height:52px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  font-size:24px;
+  text-decoration:none;
 }
 
-.whatsapp { background: #25D366; }
-.messenger { background: linear-gradient(135deg, #0084ff, #00c6ff); }
+.whatsapp { background:#25D366; }
+.messenger { background:#0084ff; }
 
-/* ANIMATIONS */
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(0,0,0,0.3); }
-  70% { box-shadow: 0 0 0 15px rgba(0,0,0,0); }
-  100% { box-shadow: 0 0 0 0 rgba(0,0,0,0); }
-}
-
-/* MOBILE */
-@media (max-width: 600px) {
-  .hero {
-    background-attachment: scroll;
-  }
+@media(max-width:600px){
+  section{padding:60px 0}
 }
 </style>
 </head>
@@ -224,10 +220,10 @@ footer {
 
 <!-- HERO -->
 <section class="hero">
-  <div class="container hero-content">
+  <div class="container">
     <h1>Hi, I’m Snooky Delos Reyes</h1>
-    <p>I help small businesses and online sellers turn visitors into customers with fast, modern, and conversion-focused websites.</p>
-    <a href="#contact" class="btn">Free Consultation <i class="fa-solid fa-arrow-right"></i></a>
+    <p>I help small businesses and online sellers turn visitors into customers using fast, SEO-friendly, and conversion-focused websites.</p>
+    <a href="#contact" class="btn">Free Consultation</a>
   </div>
 </section>
 
@@ -242,27 +238,63 @@ footer {
     <div class="projects">
       <div class="card project">
         <h3><a href="https://toppickrpro.com" target="_blank">TopPickrPro</a></h3>
-        <p><strong>Result:</strong> SEO-ready, AdSense-friendly platform.</p>
-        <a href="https://toppickrpro.com" target="_blank" class="btn project-btn">
-          View Project <i class="fa-solid fa-arrow-right"></i>
-        </a>
+        <p>SEO-ready and AdSense-friendly educational platform.</p>
+        <a href="https://toppickrpro.com" target="_blank" class="btn project-btn">View Project</a>
       </div>
 
       <div class="card project">
-        <h3><a href="https://example.com" target="_blank">Online Shop Website</a></h3>
-        <p><strong>Result:</strong> Improved buyer trust and brand image.</p>
-        <a href="https://toppickrpro.com/shopping" target="_blank" class="btn project-btn">
-          View Project <i class="fa-solid fa-arrow-right"></i>
-        </a>
+        <h3><a href="https://toppickrpro.com/shopping" target="_blank">Online Shop Website</a></h3>
+        <p>Simple shop layout that builds trust and drives clicks.</p>
+        <a href="https://toppickrpro.com/shopping" target="_blank" class="btn project-btn">View Project</a>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE ME -->
+<section class="why">
+  <div class="container">
+    <div class="section-title">
+      <h2>Why Choose Me</h2>
+      <p>Focused on results, not just design</p>
+    </div>
+
+    <div class="why-grid">
+      <div class="why-box">
+        <i class="fa-solid fa-bolt"></i>
+        <h3>Fast & Optimized</h3>
+        <p>Websites built for speed, SEO, and Google PageSpeed scores.</p>
+      </div>
+
+      <div class="why-box">
+        <i class="fa-solid fa-chart-line"></i>
+        <h3>Conversion-Focused</h3>
+        <p>Designed to turn visitors into leads and paying customers.</p>
+      </div>
+
+      <div class="why-box">
+        <i class="fa-solid fa-handshake"></i>
+        <h3>Business-Minded</h3>
+        <p>I understand sales, trust, and how users actually behave.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="container">
+    <div class="testimonial-box">
+      <p>“Snooky delivered a clean, professional website that made our business look more credible online.”</p>
+      <strong>— Small Business Owner</strong>
     </div>
   </div>
 </section>
 
 <!-- CTA -->
 <section class="cta" id="contact">
-  <h2>Let’s Build Something That Works</h2>
-  <p>Simple. Clean. Built to convert.</p>
+  <h2>Ready to Grow Your Business Online?</h2>
+  <p>Let’s build something that actually works.</p>
 </section>
 
 <footer>
@@ -271,10 +303,10 @@ footer {
 
 <!-- FLOATING CHAT -->
 <div class="chat-float">
-  <a href="https://wa.me/63XXXXXXXXXX" target="_blank" class="chat-btn whatsapp">
+  <a href="https://wa.me/63XXXXXXXXXX" class="chat-btn whatsapp" target="_blank">
     <i class="fab fa-whatsapp"></i>
   </a>
-  <a href="https://m.me/YOURFACEBOOKUSERNAME" target="_blank" class="chat-btn messenger">
+  <a href="https://m.me/YOURFACEBOOKUSERNAME" class="chat-btn messenger" target="_blank">
     <i class="fab fa-facebook-messenger"></i>
   </a>
 </div>
