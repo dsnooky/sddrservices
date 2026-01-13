@@ -61,20 +61,33 @@ body {
   margin-bottom: 2rem;
 }
 
+/* BUTTONS */
 .btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   padding: 12px 28px;
   background: white;
   color: var(--primary);
   border-radius: 30px;
   font-weight: 600;
   text-decoration: none;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn i {
+  transition: transform 0.3s ease;
 }
 
 .btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(37,99,235,0.35);
+}
+
+.btn:hover i {
+  transform: translateX(4px);
 }
 
 /* SECTIONS */
@@ -85,10 +98,6 @@ section {
 .section-title {
   text-align: center;
   margin-bottom: 50px;
-}
-
-.section-title h2 {
-  font-size: 2rem;
 }
 
 .section-title p {
@@ -131,6 +140,18 @@ section {
   border-left: 4px solid var(--primary);
 }
 
+/* PROJECT BUTTON SPECIAL */
+.project-btn {
+  margin-top: 15px;
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: #fff;
+  animation: softPulse 3s infinite;
+}
+
+.project-btn:hover {
+  box-shadow: 0 15px 40px rgba(37,99,235,0.45);
+}
+
 /* WORKFLOW */
 .steps {
   display: grid;
@@ -151,10 +172,6 @@ section {
   color: white;
   text-align: center;
   padding: 80px 20px;
-}
-
-.cta h2 {
-  margin-bottom: 20px;
 }
 
 /* FOOTER */
@@ -187,20 +204,16 @@ footer {
   font-size: 26px;
   text-decoration: none;
   box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   animation: pulse 2s infinite;
 }
 
-.chat-btn:hover {
-  transform: scale(1.1);
-}
+.whatsapp { background: #25D366; }
+.messenger { background: linear-gradient(135deg, #0084ff, #00c6ff); }
 
-.whatsapp {
-  background: #25D366;
-}
-
-.messenger {
-  background: linear-gradient(135deg, #0084ff, #00c6ff);
+/* ANIMATIONS */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes pulse {
@@ -209,9 +222,10 @@ footer {
   100% { box-shadow: 0 0 0 0 rgba(0,0,0,0); }
 }
 
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+@keyframes softPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
 }
 
 @media (max-width: 600px) {
@@ -226,100 +240,47 @@ footer {
 
 <body>
 
-<!-- HERO -->
 <section class="hero">
   <div class="container hero-content">
     <h1>Hi, I’m Snooky Delos Reyes</h1>
     <p>I help small businesses and online sellers get more customers through fast, clear, and conversion-focused websites.</p>
-    <a href="#contact" class="btn">Free Consultation</a>
+    <a href="#contact" class="btn">Free Consultation <i class="fa-solid fa-arrow-right"></i></a>
   </div>
 </section>
 
-<!-- SERVICES -->
-<section>
-  <div class="container">
-    <div class="section-title">
-      <h2>What I Do</h2>
-      <p>Simple, practical solutions that work</p>
-    </div>
-
-    <div class="services">
-      <div class="card">
-        <i class="fa-solid fa-globe"></i>
-        <h3>Small Business Websites</h3>
-        <p>Professional, mobile-friendly websites designed to convert visitors into customers.</p>
-      </div>
-
-      <div class="card">
-        <i class="fa-solid fa-cart-shopping"></i>
-        <h3>Online Shop Websites</h3>
-        <p>Clean product listings with pricing and strong call-to-action buttons.</p>
-      </div>
-
-      <div class="card">
-        <i class="fa-solid fa-toolbox"></i>
-        <h3>Custom Web Tools</h3>
-        <p>Simple tools tailored to your business needs.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PROJECTS -->
 <section>
   <div class="container">
     <div class="section-title">
       <h2>Featured Projects</h2>
-      <p>Built with real business goals in mind</p>
+      <p>Real solutions for real businesses</p>
     </div>
 
     <div class="projects">
       <div class="card project">
         <h3>TopPickrPro</h3>
-        <p><strong>Problem:</strong> Beginners struggle to find legitimate online income methods.</p>
-        <p><strong>Solution:</strong> Built an educational platform with curated content.</p>
-        <p><strong>Result:</strong> SEO-ready structure and monetization-friendly design.</p>
+        <p><strong>Problem:</strong> Beginners struggle to find legitimate income methods.</p>
+        <p><strong>Result:</strong> SEO-ready and monetization-friendly.</p>
+        <a href="https://toppickrpro.com" target="_blank" class="btn project-btn">
+          View Project <i class="fa-solid fa-arrow-right"></i>
+        </a>
       </div>
 
       <div class="card project">
         <h3>Online Shop Website (Sample)</h3>
-        <p><strong>Problem:</strong> Sellers rely only on social media pages.</p>
-        <p><strong>Solution:</strong> Created a simple online shop with clear product listings.</p>
-        <p><strong>Result:</strong> Improved buyer trust and professional brand image.</p>
+        <p><strong>Problem:</strong> Sellers rely only on social media.</p>
+        <p><strong>Result:</strong> Improved buyer trust and brand image.</p>
+        <a href="https://example.com" target="_blank" class="btn project-btn">
+          View Project <i class="fa-solid fa-arrow-right"></i>
+        </a>
       </div>
     </div>
   </div>
-</section>
-
-<!-- WORKFLOW -->
-<section>
-  <div class="container">
-    <div class="section-title">
-      <h2>How We Work</h2>
-    </div>
-
-    <div class="steps">
-      <div class="step">1️⃣ Discuss your goals</div>
-      <div class="step">2️⃣ Simple solution plan</div>
-      <div class="step">3️⃣ Design & build</div>
-      <div class="step">4️⃣ Review & launch</div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cta" id="contact">
-  <h2>Let’s Build Something That Works</h2>
-  <p>Simple. Effective. Built for real users.</p>
-  <br>
-  <a href="#" class="btn">Message Me</a>
 </section>
 
 <footer>
   © 2026 Snooky Delos Reyes • All Rights Reserved
 </footer>
 
-<!-- FLOATING CHAT BUTTONS -->
 <div class="chat-float">
   <a href="https://wa.me/63XXXXXXXXXX" target="_blank" class="chat-btn whatsapp">
     <i class="fab fa-whatsapp"></i>
