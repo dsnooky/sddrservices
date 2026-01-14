@@ -21,27 +21,14 @@
   --gray:#64748b;
 }
 
-* {
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Poppins',sans-serif;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
 
-body {
-  background:var(--light);
-  color:var(--dark);
-  line-height:1.6;
-}
+body{background:var(--light);color:var(--dark);line-height:1.6}
 
-.container {
-  width:90%;
-  max-width:1100px;
-  margin:auto;
-}
+.container{width:90%;max-width:1100px;margin:auto}
 
 /* HERO */
-.hero {
+.hero{
   min-height:100vh;
   display:flex;
   align-items:center;
@@ -53,23 +40,15 @@ body {
   background-position:center;
 }
 
-.hero h1 {
-  font-size:clamp(2.2rem,5vw,3.2rem);
-  margin-bottom:1rem;
-}
+.hero h1{font-size:clamp(2.2rem,5vw,3.2rem);margin-bottom:1rem}
+.hero p{max-width:600px;margin-bottom:2rem;color:#e5e7eb}
 
-.hero p {
-  max-width:600px;
-  margin-bottom:2rem;
-  color:#e5e7eb;
-}
-
-/* BUTTON */
-.btn {
+/* CTA BUTTON */
+.btn{
   display:inline-flex;
   align-items:center;
   gap:8px;
-  padding:14px 30px;
+  padding:14px 32px;
   background:linear-gradient(135deg,#2563eb,#1e40af);
   color:#fff;
   border-radius:30px;
@@ -77,28 +56,24 @@ body {
   font-weight:600;
 }
 
+.btn.secondary{
+  background:#fff;
+  color:var(--primary);
+}
+
 /* SECTIONS */
-section {
-  padding:80px 0;
-}
-
-.section-title {
-  text-align:center;
-  margin-bottom:50px;
-}
-
-.section-title p {
-  color:var(--gray);
-}
+section{padding:80px 0}
+.section-title{text-align:center;margin-bottom:50px}
+.section-title p{color:var(--gray)}
 
 /* WHAT I DO */
-.services {
+.services{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
   gap:25px;
 }
 
-.service-box {
+.service-box{
   background:#fff;
   padding:30px;
   border-radius:16px;
@@ -106,95 +81,73 @@ section {
   box-shadow:0 6px 20px rgba(0,0,0,.05);
 }
 
-.service-box i {
+.service-box i{
   font-size:2rem;
   color:var(--primary);
   margin-bottom:15px;
 }
 
 /* WHY CHOOSE ME */
-.why {
-  background:#f1f5f9;
-}
-
-.why-grid {
+.why{background:#f1f5f9}
+.why-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
   gap:25px;
 }
-
-.why-box {
+.why-box{
   background:#fff;
   padding:30px;
   border-radius:16px;
   text-align:center;
 }
 
-.why-box i {
-  font-size:2rem;
-  color:var(--primary);
-  margin-bottom:15px;
-}
-
 /* PROJECTS */
-.projects {
+.projects{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
   gap:25px;
 }
-
-.card {
+.card{
   background:#fff;
   padding:30px;
   border-radius:16px;
   box-shadow:0 6px 20px rgba(0,0,0,.05);
 }
+.project{border-left:4px solid var(--primary)}
+.project-btn{margin-top:15px}
 
-.project {
-  border-left:4px solid var(--primary);
-}
-
-.project h3 a {
-  color:inherit;
-  text-decoration:none;
-}
-
-.project-btn {
-  margin-top:15px;
-}
-
-/* TESTIMONIALS */
-.testimonials {
-  color:#fff;
+/* TESTIMONIAL */
+.testimonials{
   background:
     linear-gradient(rgba(15,23,42,.85),rgba(15,23,42,.85)),
     url("https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1600&q=70");
   background-size:cover;
   background-position:center;
+  color:#fff;
   text-align:center;
 }
+.testimonial-box{max-width:700px;margin:auto}
+.testimonial-box p{font-style:italic;color:#e5e7eb}
 
-.testimonial-box {
-  max-width:700px;
-  margin:auto;
-}
-
-.testimonial-box p {
-  font-style:italic;
-  color:#e5e7eb;
-  margin-bottom:15px;
-}
-
-/* CTA */
-.cta {
+/* MID CTA */
+.mid-cta{
+  background:#fff;
   text-align:center;
+  padding:70px 20px;
+  border-top:1px solid #e5e7eb;
+  border-bottom:1px solid #e5e7eb;
+}
+
+/* FINAL CTA */
+.cta{
   background:linear-gradient(135deg,#1e40af,#2563eb);
   color:#fff;
+  text-align:center;
   padding:90px 20px;
 }
 
 /* FOOTER */
-footer {
+footer{
   background:#020617;
   color:#94a3b8;
   text-align:center;
@@ -202,7 +155,7 @@ footer {
 }
 
 /* FLOATING CHAT */
-.chat-float {
+.chat-float{
   position:fixed;
   bottom:25px;
   right:20px;
@@ -210,8 +163,7 @@ footer {
   flex-direction:column;
   gap:12px;
 }
-
-.chat-btn {
+.chat-btn{
   width:52px;
   height:52px;
   border-radius:50%;
@@ -222,13 +174,8 @@ footer {
   font-size:24px;
   text-decoration:none;
 }
-
-.whatsapp { background:#25D366; }
-.messenger { background:#0084ff; }
-
-@media(max-width:600px){
-  section{padding:60px 0}
-}
+.whatsapp{background:#25D366}
+.messenger{background:#0084ff}
 </style>
 </head>
 
@@ -237,9 +184,9 @@ footer {
 <!-- HERO -->
 <section class="hero">
   <div class="container">
-    <h1>Hi, I’m Snooky Delos Reyes</h1>
-    <p>I build fast, SEO-friendly, and conversion-focused websites that help small businesses grow online.</p>
-    <a href="#contact" class="btn">Free Consultation</a>
+    <h1>Turn Your Website Into a Customer-Getting Machine</h1>
+    <p>I help small businesses and online sellers attract visitors, build trust, and convert clicks into paying customers.</p>
+    <a href="#contact" class="btn">Get a Free Website Review</a>
   </div>
 </section>
 
@@ -248,26 +195,26 @@ footer {
   <div class="container">
     <div class="section-title">
       <h2>What I Do</h2>
-      <p>Practical web solutions for real businesses</p>
+      <p>Simple solutions that drive real business results</p>
     </div>
 
     <div class="services">
       <div class="service-box">
         <i class="fa-solid fa-laptop-code"></i>
         <h3>Website Development</h3>
-        <p>Modern, responsive websites optimized for speed and user experience.</p>
+        <p>Fast, mobile-friendly websites designed to convert visitors.</p>
       </div>
 
       <div class="service-box">
         <i class="fa-solid fa-cart-shopping"></i>
         <h3>Online Shops</h3>
-        <p>Clean product pages that build trust and make buying easy.</p>
+        <p>Product-focused pages that build trust and increase sales.</p>
       </div>
 
       <div class="service-box">
         <i class="fa-solid fa-chart-line"></i>
         <h3>SEO & Performance</h3>
-        <p>Built with Google PageSpeed, SEO, and Core Web Vitals in mind.</p>
+        <p>Optimized for Google PageSpeed, SEO, and user experience.</p>
       </div>
     </div>
   </div>
@@ -278,29 +225,33 @@ footer {
   <div class="container">
     <div class="section-title">
       <h2>Why Choose Me</h2>
-      <p>Focused on results, not just visuals</p>
+      <p>Because your website should work for your business</p>
     </div>
 
     <div class="why-grid">
       <div class="why-box">
-        <i class="fa-solid fa-bolt"></i>
-        <h3>Fast & Optimized</h3>
-        <p>Your website loads fast and scores well on Google PageSpeed.</p>
+        <h3>Built for Results</h3>
+        <p>Every page is designed to guide visitors toward action.</p>
       </div>
 
       <div class="why-box">
-        <i class="fa-solid fa-user-check"></i>
-        <h3>User-Focused</h3>
-        <p>Designed around real users to increase trust and conversions.</p>
+        <h3>Fast & Reliable</h3>
+        <p>Optimized for speed, mobile, and Google standards.</p>
       </div>
 
       <div class="why-box">
-        <i class="fa-solid fa-handshake"></i>
-        <h3>Business-Oriented</h3>
-        <p>I understand sales, branding, and customer behavior.</p>
+        <h3>Business-Focused</h3>
+        <p>I design with sales, trust, and growth in mind.</p>
       </div>
     </div>
   </div>
+</section>
+
+<!-- MID CTA -->
+<section class="mid-cta">
+  <h2>Not Sure If Your Website Is Helping or Hurting Your Business?</h2>
+  <p>Let me review it and tell you exactly what to improve.</p>
+  <a href="#contact" class="btn">Request a Free Review</a>
 </section>
 
 <!-- PROJECTS -->
@@ -312,15 +263,15 @@ footer {
 
     <div class="projects">
       <div class="card project">
-        <h3><a href="https://toppickrpro.com" target="_blank">TopPickrPro</a></h3>
+        <h3>TopPickrPro</h3>
         <p>SEO-ready, AdSense-friendly platform.</p>
-        <a href="https://toppickrpro.com" class="btn project-btn" target="_blank">View Project</a>
+        <a href="https://toppickrpro.com" target="_blank" class="btn project-btn">View Project</a>
       </div>
 
       <div class="card project">
-        <h3><a href="https://toppickrpro.com/shopping" target="_blank">Online Shop Website</a></h3>
-        <p>Simple shop layout built for trust.</p>
-        <a href="https://toppickrpro.com/shopping" class="btn project-btn" target="_blank">View Project</a>
+        <h3>Online Shop Website</h3>
+        <p>Simple shop layout built to increase trust.</p>
+        <a href="https://toppickrpro.com/shopping" target="_blank" class="btn project-btn">View Project</a>
       </div>
     </div>
   </div>
@@ -330,16 +281,17 @@ footer {
 <section class="testimonials">
   <div class="container">
     <div class="testimonial-box">
-      <p>“Snooky created a clean, fast website that helped our business look professional online.”</p>
+      <p>“Our website finally looks professional and converts visitors into real inquiries.”</p>
       <strong>— Small Business Owner</strong>
     </div>
   </div>
 </section>
 
-<!-- CTA -->
+<!-- FINAL CTA -->
 <section class="cta" id="contact">
-  <h2>Ready to Grow Your Business?</h2>
-  <p>Let’s build something that actually works.</p>
+  <h2>Ready to Get More Customers Online?</h2>
+  <p>Let’s build a website that actually works for your business.</p>
+  <a href="https://wa.me/63XXXXXXXXXX" class="btn secondary">Start Free Consultation</a>
 </section>
 
 <footer>
@@ -348,13 +300,15 @@ footer {
 
 <!-- FLOATING CHAT -->
 <div class="chat-float">
-  <a href="https://wa.me/63XXXXXXXXXX" class="chat-btn whatsapp" target="_blank">
+  <a href="https://wa.me/639083131655" class="chat-btn whatsapp" target="_blank">
     <i class="fab fa-whatsapp"></i>
   </a>
-  <a href="https://m.me/YOURFACEBOOKUSERNAME" class="chat-btn messenger" target="_blank">
+  <a href="https://www.facebook.com/share/1CBp7C1FAt/" class="chat-btn messenger" target="_blank">
     <i class="fab fa-facebook-messenger"></i>
   </a>
 </div>
 
+</body>
+</html>
 </body>
 </html>
